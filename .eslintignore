@@ -1,0 +1,5 @@
+# ESLint Ignore Configuration File
+# See http://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories for more details.
+
+.expo/**
+node_modules/**
