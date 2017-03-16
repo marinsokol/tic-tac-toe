@@ -50,7 +50,16 @@ function checkWinner(board) {
   }
   if (tempSec) return board[2][0];
 
-  return false;
+  /**
+   *   is board full
+   */
+  for (let i = 0; i < board.length; i += 1) {
+    for (let j = 0; j < board[i].length; j += 1) {
+      if (board[i][j] === '') return false;
+    }
+  }
+
+  return 'full';
 }
 
 function Root() {
@@ -76,10 +85,12 @@ function Root() {
           .reducer((state, action) => {
             const { turn, board, result } = state;
             const { payload } = action;
+            if (board[payload[0]][payload[1]] !== '') return state;
+
             board[payload[0]][payload[1]] = turn;
 
             const winner = checkWinner(board);
-            if (winner) {
+            if (winner && winner !== 'full') {
               return {
                 ...state,
                 turn: 'X',
@@ -87,6 +98,16 @@ function Root() {
                   ...result,
                   [winner]: result[winner] + 1,
                 },
+                board: [
+                  ['', '', ''],
+                  ['', '', ''],
+                  ['', '', ''],
+                ],
+              };
+            } else if (winner === 'full') {
+              return {
+                ...state,
+                turn: 'X',
                 board: [
                   ['', '', ''],
                   ['', '', ''],
