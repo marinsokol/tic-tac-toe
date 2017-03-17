@@ -7,7 +7,7 @@ import checkWinner from './checkWinner';
 import styles from './styles';
 
 function Root() {
-  const initState = {
+  const initialState = {
     turn: 'X',
     result: {
       X: 0,
@@ -21,7 +21,7 @@ function Root() {
   };
 
   return {
-    initialState: initState,
+    initialState,
 
     reducers(sources) {
       return [
@@ -31,12 +31,14 @@ function Root() {
           .reducer((state, action) => {
             const { turn, board, result } = state;
             const { payload } = action;
-            if (board[payload[0]][payload[1]] !== '') return state;
+            const choosenRow = parseInt(payload[0], 10);
+            const choosenCol = parseInt(payload[1], 10);
+            if (board[choosenRow][choosenCol] !== '') return state;
 
             const newBoard = board.map((row, rowIndex) => (
               row.map((col, colIndex) => {
-                if (rowIndex === parseInt(payload[0], 10) &&
-                  colIndex === parseInt(payload[1], 10)) return turn;
+                if (rowIndex === choosenRow &&
+                  colIndex === choosenCol) return turn;
 
                 return col;
               })
@@ -78,7 +80,7 @@ function Root() {
 
         sources.select(Header)
           .on('reset')
-          .reducer(() => initState),
+          .reducer(() => initialState),
 
       ];
     },
