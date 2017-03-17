@@ -1,4 +1,4 @@
-function checkWinner(board) {
+export function checkWinner(board) {
   /**
    *  check for rows
    */
@@ -43,6 +43,10 @@ function checkWinner(board) {
   }
   if (tempSec) return board[2][0];
 
+  return false;
+}
+
+export function isBoardFull(board) {
   /**
    *   is board full
    */
@@ -52,7 +56,6 @@ function checkWinner(board) {
     }
   }
 
-  return 'full';
+  return true;
 }
 
-export default checkWinner;

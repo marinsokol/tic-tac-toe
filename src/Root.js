@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Header from './components/Header';
 import Square from './components/Board/Square';
 import BoardView from './components/Board/view';
-import checkWinner from './checkWinner';
+import { checkWinner, isBoardFull } from './utils';
 import styles from './styles';
 
 function Root() {
@@ -30,9 +30,9 @@ function Root() {
           .on('boardSelect')
           .reducer((state, action) => {
             const { turn, board, result } = state;
-            const { payload } = action;
-            const choosenRow = parseInt(payload[0], 10);
-            const choosenCol = parseInt(payload[1], 10);
+            const { square } = action;
+            const choosenRow = parseInt(square[0], 10);
+            const choosenCol = parseInt(square[1], 10);
             if (board[choosenRow][choosenCol] !== '') return state;
 
             const newBoard = board.map((row, rowIndex) => (
@@ -45,7 +45,7 @@ function Root() {
             ));
 
             const winner = checkWinner(newBoard);
-            if (winner && winner !== 'full') {
+            if (winner) {
               return {
                 ...state,
                 turn: 'X',
@@ -59,7 +59,9 @@ function Root() {
                   ['', '', ''],
                 ],
               };
-            } else if (winner === 'full') {
+            }
+
+            if (isBoardFull(newBoard)) {
               return {
                 ...state,
                 turn: 'X',

@@ -14,7 +14,7 @@ function Square(mainProps) {
           .on('onPress')
           .mapTo({
             type: 'boardSelect',
-            payload: mainProps.index,
+            square: mainProps.index,
           }),
       ];
     },
