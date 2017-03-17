@@ -1,14 +1,6 @@
-import React from 'react';
-import Rx from 'rxjs/Rx';
-import createRecycle from 'recyclejs/react';
+import Recycle from 'recyclejs';
 import Root from './src/Root';
 
-const Recycle = createRecycle(React, Rx);
+const App = Recycle()(Root); // eslint-disable-line
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <Recycle root={Root} />
-    );
-  }
-}
+export default App;

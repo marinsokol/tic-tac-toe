@@ -11,7 +11,7 @@ function Header() {
 
     actions(sources) {
       return [
-        sources.select(TouchableHighlight)
+        sources.selectClass('reset')
           .on('onPress')
           .mapTo({ type: 'reset' }),
       ];
@@ -35,7 +35,7 @@ function Header() {
               <Text style={styles.resultsText}> {result.O} </Text>
             </View>
           </View>
-          <TouchableHighlight style={styles.button}>
+          <TouchableHighlight className={'reset'} style={styles.button}>
             <Text style={styles.buttonText}> RESET </Text>
           </TouchableHighlight>
         </View>

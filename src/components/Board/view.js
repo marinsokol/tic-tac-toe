@@ -3,7 +3,8 @@ import { View } from 'react-native';
 import Square from './Square';
 import styles from '../../styles';
 
-export default function boardView(board) {
+function BoardView(props) {
+  const { board } = props; // eslint-disable-line
   const boardElement = [];
   board.forEach((row, rowIndex) => {
     const tempRow = [];
@@ -32,3 +33,5 @@ export default function boardView(board) {
   </View>
   );
 }
+
+export default BoardView;
