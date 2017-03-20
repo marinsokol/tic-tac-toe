@@ -37,8 +37,9 @@ function Root() {
 
             const newBoard = board.map((row, rowIndex) => (
               row.map((col, colIndex) => {
-                if (rowIndex === choosenRow &&
-                  colIndex === choosenCol) return turn;
+                if (rowIndex === choosenRow && colIndex === choosenCol) {
+                  return turn;
+                }
 
                 return col;
               })

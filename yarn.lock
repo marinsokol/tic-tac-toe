@@ -101,17 +101,13 @@ acorn-jsx@^3.0.0:
   dependencies:
     acorn "^3.0.4"
 
-acorn@4.0.4:
+acorn@4.0.4, acorn@^4.0.3, acorn@^4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.4.tgz#17a8d6a7a6c4ef538b814ec9abac2779293bf30a"
 
 acorn@^3.0.4:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
-
-acorn@^4.0.3, acorn@^4.0.4:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.11.tgz#edcda3bd937e7556410d42ed5860f67399c794c0"
 
 agent-base@2:
   version "2.0.1"
@@ -4866,7 +4862,7 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@^15.4.1, react@^15.4.2, react@~15.4.0:
+react@^15.4.2, react@~15.4.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
@@ -4961,13 +4957,11 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-recyclejs@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/recyclejs/-/recyclejs-1.2.1.tgz#cc799b44ec4f64ccfd3c6887d8e0f05a1350bc2a"
+recyclejs@beta:
+  version "2.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/recyclejs/-/recyclejs-2.0.0-rc.6.tgz#f675cd923d3e8e62b25cabe2542a93c8e70870b7"
   dependencies:
     objectpath "1.2.1"
-    react "^15.4.1"
-    rxjs "^5.0.1"
 
 redeyed@~1.0.0:
   version "1.0.1"
@@ -5237,7 +5231,7 @@ rx@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-rxjs@^5.0.1:
+rxjs@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.2.0.tgz#db537de8767c05fa73721587a29e0085307d318b"
   dependencies:

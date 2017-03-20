@@ -32,6 +32,7 @@
     "expo": "14.0.2",
     "react": "~15.4.0",
     "react-native": "0.41.2",
-    "recyclejs": "^1.2.1"
+    "recyclejs": "beta",
+    "rxjs": "^5.2.0"
   }
 }
