@@ -14,8 +14,7 @@
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "ios": "react-native-scripts ios"
   },
   "jest": {
     "preset": "jest-expo"
@@ -31,8 +30,6 @@
     "eslint-plugin-react": "^6.4.1",
     "expo": "14.0.2",
     "react": "~15.4.0",
-    "react-native": "0.41.2",
-    "recyclejs": "beta",
-    "rxjs": "^5.2.0"
+    "react-native": "0.41.2"
   }
 }

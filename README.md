@@ -2,7 +2,7 @@
 
 ## About
 
-Simple mobile app build with [create-react-native-app](https://github.com/react-community/create-react-native-app) and [recycle](https://github.com/recyclejs/recycle).
+Simple mobile app build with [create-react-native-app](https://github.com/react-community/create-react-native-app).
 
 ## Installation 
 Make sure you have Node 6 or later installed.
